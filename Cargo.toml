@@ -1,0 +1,27 @@
+[package]
+name = "waservix"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.88"
+description = "Rust client for the WAservix WhatsApp API Gateway: send WhatsApp messages from your own number"
+license = "MIT"
+repository = "https://github.com/TekservixHQ/waservix-rust"
+homepage = "https://tekservix.com/waservix/"
+documentation = "https://docs.rs/waservix"
+readme = "README.md"
+keywords = ["whatsapp", "whatsapp-api", "messaging", "chat", "gateway"]
+categories = ["api-bindings", "web-programming::http-client"]
+authors = ["Tekservix <support@tekservix.com>"]
+include = ["src/**", "Cargo.toml", "README.md", "LICENSE"]
+
+[features]
+default = ["default-tls"]
+default-tls = ["reqwest/default-tls"]
+native-tls = ["reqwest/native-tls"]
+
+[dependencies]
+reqwest = { version = "0.13", default-features = false, features = ["charset", "http2", "system-proxy"] }
+serde_json = "1"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
