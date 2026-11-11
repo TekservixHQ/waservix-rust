@@ -1,9 +1,9 @@
 [package]
 name = "waservix"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 rust-version = "1.88"
-description = "Rust client for the WAservix WhatsApp API Gateway: send WhatsApp messages from your own number"
+description = "WAservix WhatsApp API Gateway: official Rust client by Tekservix. Send WhatsApp messages from your own number"
 license = "MIT"
 repository = "https://github.com/TekservixHQ/waservix-rust"
 homepage = "https://tekservix.com/waservix/"
